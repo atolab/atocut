@@ -14,4 +14,8 @@ set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
 
 install(TARGETS atocut DESTINATION lib)
-install(DIRECTORY include DESTINATION include)
+
+install (
+    DIRECTORY ${CMAKE_SOURCE_DIR}/include/
+    DESTINATION include/ato
+    FILES_MATCHING PATTERN "*.h")
